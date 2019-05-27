@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}Read{{ title }}{% endblock %}
+
+{% block body %}
+<h1>Lorem Ipsum</h1>
+<h2>{{ title }}</h2>
+<h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a nisl quis mi euismod convallis vitae in neque. Vestibulum laoreet sapien nec arcu malesuada placerat. Etiam iaculis laoreet magna a consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel augue quam. Etiam urna elit, tempor id lacus a, tempor vehicula quam. Phasellus nec suscipit lorem. Sed et dui non nibh luctus convallis.</p>
+
+<p>Nam sapien massa, rutrum et accumsan nec, euismod vel turpis. Sed pellentesque sagittis nibh non auctor. Nam eu facilisis tellus, sed dignissim dolor. Cras in odio vitae enim pellentesque rhoncus eu in odio. Donec ac ultricies urna. Pellentesque ultrices ullamcorper lacinia. Vestibulum eu nisi non tellus mollis gravida ut id est. Sed at lorem et nunc tempus ornare vel sed massa. Maecenas eu hendrerit leo. Morbi et ligula pretium, malesuada leo ac, maximus nunc. Nulla dictum feugiat lectus, ut pharetra sapien volutpat sed.</p>
+
+<h2>Comments {{ comments|length }}</h2>
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
